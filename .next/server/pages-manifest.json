@@ -2,5 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+<<<<<<< HEAD
   "/api/idea": "pages/api/idea.js"
+=======
+  "/api/idea": "pages/api/idea.js",
+  "/": "pages/index.js"
+>>>>>>> e4068e93a501591e3cb881f526f002358c516076
 }
