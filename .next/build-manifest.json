@@ -15,14 +15,11 @@
     "static/development/_middlewareManifest.js"
   ],
   "pages": {
-<<<<<<< HEAD
-=======
     "/": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/index.js"
     ],
->>>>>>> e4068e93a501591e3cb881f526f002358c516076
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
