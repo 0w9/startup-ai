@@ -7,7 +7,7 @@ export function Generator() {
     async function getIdea(event) {  
         event.preventDefault();
         let keyword = document.getElementById("keyword").value;
-        fetch(`http://localhost:3000/api/idea?keyword=${keyword}`).then(response => response.json()).then(response => {
+        fetch(`https://startup-ai.vercel.app/api/idea?keyword=${keyword}`).then(response => response.json()).then(response => {
             console.log(response.idea);
             
             setIdea(response.idea)
