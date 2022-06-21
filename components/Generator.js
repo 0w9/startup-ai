@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button, Input, Text, Card, Loading } from '@nextui-org/react';
 
 export function Generator() {
-    const [idea, setIdea] = useState();
+    const [idea, setIdea] = useState("");
     const [enabled, setEnabled] = useState(false);
 
     function getIdea(event) {  
@@ -11,7 +11,7 @@ export function Generator() {
         document.getElementById("btn").setAttribute("disabled", true)
         event.preventDefault();
         let keyword = document.getElementById("keyword").value;
-        fetch(`https://startup-ai.vercel.app/api/idea?keyword=${keyword}`).then(response => response.json()).then(response => {
+        fetch(`http://localhost:3000/api/idea?keyword=${keyword}`).then(response => response.json()).then(response => {
             console.log(response.idea);
             
             setIdea(response.idea)
@@ -26,7 +26,7 @@ export function Generator() {
                     <Input  type={"text"}  className={"mr-10"} placeholder={"Enter one or more keywords."} id={"keyword"} required shadow />
                     <Button type={"submit"} className={"ml-10"} id={"btn"} color={"primary"} disabled={enabled} shadow>Get ideas</Button>
                 </form>
-                { idea !== "" ? <Card><Card.Body><Text blockquote>{idea}</Text></Card.Body></Card> : <></> }
+                { idea !== "" ? <Card className={"max-w-10"}><Card.Body><Text className={"max-w-10"} blockquote>{idea}</Text></Card.Body></Card> : <></> }
             </div>
         </>
     )
